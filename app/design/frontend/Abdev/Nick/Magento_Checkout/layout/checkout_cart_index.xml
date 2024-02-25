@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<referenceBlock name="checkout.cart.shipping">
+    <!-- TODO: This is cause Exception #0 (Magento\Framework\Config\Dom\ValidationException): Element 'arguments': This element is not expected.
+    <arguments>
+        <argument name="jsLayout" xsi:type="array">
+            <item name="components" xsi:type="array">
+                <item name="block-summary" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </item>
+        </argument>
+    </arguments> -->
+</referenceBlock>

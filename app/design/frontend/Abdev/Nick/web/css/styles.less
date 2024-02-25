@@ -1,0 +1,274 @@
+/* Custom CSS for Nick Theme */
+/*Copyright © Abdev 2020. All rights reserved.*/
+
+/* ____________________________________________________ */
+/* THE GREAT RESET!!!!!!!! */
+/* ____________________________________________________ */
+
+/* * {
+    padding: none !important;
+    margin: none !important;
+    box-sizing: border-box !important;
+} */
+
+/* ____________________________________________________ */
+/* color variables */
+/* ____________________________________________________ */
+
+/* br yel */
+@br-yel--s080: #d7ca09;
+@br-yel: #f5e71a;
+@br-yel--l120: #f6f094;
+
+/* br lil */
+@br-lil--s010: #26064d;
+@br-lil--s010--op25: rgba(38, 6, 77, 0.25);
+@br-lil--s070: #5e1daf;
+@br-lil: #904fe2;
+@br-lil--op25: rgba(144, 79, 226, 0.25);
+@br-lil--l120: #caa0ff;
+@br-lil--l140: #e3ccff;
+@br-lil--l180: #eee0ff;
+@br-lil--l190: #f6f0ff;
+
+/* black white grey */
+@000: #000000;
+@fff: #ffffff;
+@fff--op50: rgba(255, 255, 255, 0.5);
+@grey40: #838383;
+@grey80: #c6c6c6;
+
+/* ____________________________________________________ */
+/* typography */
+/* ____________________________________________________ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* core params */
+
+body {
+    background-color: @fff;
+    font-family: "Inter", sans-serif !important;
+}
+
+/* ____________________________________________________ */
+/* components */
+/* ____________________________________________________ */
+
+.page-header {
+    background-color: @br-lil--s010;
+    position: sticky;
+}
+
+.panel.header {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+}
+
+.panel.wrapper {
+    position: relative;
+    width: 100%;
+    border-bottom: none !important;
+    background-color: @br-lil;
+}
+
+.header.panel > .header.links > ul > li {
+    color: @fff !important;
+}
+
+/*header links color*/
+.header.panel > .header.links > li.welcome,
+.header.panel > .header.links > li a {
+    color: @fff !important;
+}
+
+/* pathetic attempts to change color of the links in header */
+.header.panel > .header.links > a:visited {
+    color: @fff !important;
+}
+
+/* host-wrapper for all the content in the bottom part of the header (search, logo, cart, burger menu) */
+.header.content {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0px auto 1fr 36px;
+    grid-auto-flow: row dense;
+    column-gap: 24px;
+    padding: 16px 0 16px 0 !important;
+}
+
+/* this is to make burger menu not overlapping with the logo */
+@media screen and (max-width: 768px) {
+    .header.content {
+        grid-template-columns: 40px 160px 1fr 36px;
+    }
+}
+
+/* host of host of host of search */
+.control {
+    padding: 0 !important;
+}
+
+/* burger menu host div, invisible in desktop width */
+.action.nav-toggle {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.logo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 0 !important;
+}
+
+.logo > img {
+    height: 100%;
+}
+
+/* host div of a search input prbabvly idunno */
+.block.block-search {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    float: none;
+    width: auto;
+    padding: none !important;
+}
+
+/* the action button in the search bar */
+.block-search .action.search {
+    height: 24px !important;
+    width: 24px !important;
+    font-size: 24px !important;
+    line-height: 24px !important;
+    top: 12px !important;
+    right: 16px !important;
+    padding: 0 !important;
+    color: @br-lil !important;
+}
+
+.block-search .action.search::before {
+    height: 24px !important;
+    width: 24px !important;
+    font-size: 24px !important;
+    line-height: 24px !important;
+    color: @br-lil !important;
+}
+
+/* dunno what it is */
+.nested {
+    display: none !important;
+}
+
+/* cart icon host div or idunno */
+.minicart-wrapper {
+    grid-column-start: 4;
+    margin: 0 !important;
+}
+
+.minicart-wrapper .action.showcart:before {
+    color: @fff !important;
+}
+
+a,
+.action .showcart::before {
+    position: relative;
+    padding-top: 6px;
+}
+
+.block-search > .control {
+    padding: 0px 0px 0px 0px !important;
+}
+
+#search {
+    height: 48px;
+    border-radius: 8px;
+    background-color: @fff;
+    border: none !important;
+    font-family: "inter", sans-serif !important;
+    font-size: 16px !important;
+    padding: 0 16px 0 16px !important;
+}
+
+footer {
+    background-color: @br-lil--s070 !important;
+    color: @fff !important;
+}
+
+/*button Add to cart and other primary buttons*/
+/*button,
+.action.primary {
+    background: @br-lil;
+    border: none;
+    box-shadow: inset 0px -4px 0px @br-lil--s010;
+    border-radius: 8px;
+}
+
+button:hover {
+    border: none;
+    background: @br-lil--l120;
+}
+
+button,
+.action-primary::after {
+    border: none;
+    background: @br-lil--l120;
+}
+
+button,
+.action-primary:last-child {
+    background: @br-lil;
+    border: none;
+    box-shadow: inset 0px -4px 0px @br-lil--s010;
+    border-radius: 8px;
+} */
+
+/*progress bar on checkout*/
+.opc-progress-bar-item._active:before {
+    background: @br-yel;
+}
+
+/*progress bar circle*/
+.opc-progress-bar-item._active > span:before {
+    background: @br-yel;
+}
+
+/*cart counter on header*/
+.minicart-wrapper .action.showcart .counter.qty {
+    background: @br-yel--s080;
+}
+
+/*cart counter*/
+.minicart-wrapper .action.showcart .counter.qty {
+    color: @br-lil--s070 !important;
+}
+
+/*text color*/
+a,
+.alink {
+    color: @000;
+}
+
+/*Modal window*/
+
+button,
+.cart.table-wrapper .actions-toolbar > .action,
+.action-gift {
+    background: @br-lil !important;
+    border: none;
+    box-shadow: inset 0px -4px 0px @br-lil--s010;
+    border-radius: 8px;
+}
+
+button,
+.cart.table-wrapper .actions-toolbar > .action,
+.action-gift::after {
+    border: none;
+    background: @br-lil--l120;
+}
+
+/*Checkout order summery*/
+
+.opc-block-summary {
+    background: @br-lil--l180;
+}
